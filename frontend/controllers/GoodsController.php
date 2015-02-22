@@ -16,7 +16,7 @@ class GoodsController extends BaseFrontController
         if($itemid==0){ //无商品ID 显示列表页
             $goods = (new \yii\db\Query())
                 ->select("*")
-                ->from("goods")
+                ->from("{{%goods}}")
                 ->offset(0)
                 ->limit(10)
                 ->all();
