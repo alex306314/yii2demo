@@ -16,6 +16,8 @@ Yii2 购物车演示
 
 > /frontend/web/index.php 移出到根目录 : /   
   /backend/web/index.php 移出到 : /backend/
+  
+>演示地址  http://www.aqrun.com/advanced/
     
 
 
