@@ -1,3 +1,12 @@
+Yii2 购物车演示
+===
+
+首页访问地址： /
+后台访问地址: /backend
+数据表备份文件： /data/mysql.sql
+
+
+
 Yii 2 Advanced Application Template
 ===================================
 
