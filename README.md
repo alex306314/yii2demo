@@ -5,6 +5,18 @@ Yii2 购物车演示
 - 后台访问地址: /backend
 - 数据表备份文件： /data/mysql.sql
 
+用到的数据表
+---
+
+* user &nbsp;&nbsp;&nbsp;用户表
+* goods &nbsp;&nbsp;&nbsp; 商品
+* shopping_cart &nbsp;&nbsp;&nbsp; 购物车
+* consume &nbsp;&nbsp;&nbsp;  订单
+
+
+> /frontend/web/index.php 移出到根目录 : /   
+  /backend/web/index.php 移出到 : /backend/
+    
 
 
 Yii 2 Advanced Application Template
