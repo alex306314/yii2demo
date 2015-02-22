@@ -5,6 +5,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
+use yii\helpers\Url;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -69,7 +70,7 @@ AppAsset::register($this);
         <div class="container">
             <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
             <p class="pull-right"><?= Yii::powered() ?></p>
-            <p class="pull-right btn btn-sm btn-sm-primary"><a href="/backend">后台管理</a></p>
+            <p class="pull-right btn btn-sm btn-sm-primary"><a href="<?php echo Url::to("@web/backend"); ?>">后台管理</a></p>
         </div>
     </footer>
 

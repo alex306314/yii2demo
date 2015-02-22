@@ -6,6 +6,7 @@ use frontend\base\BaseFrontController;
 use common\models\Goods;
 use common\models\User;
 use Yii;
+use yii\helpers\Url;
 
 class CartController extends BaseFrontController
 {
@@ -16,7 +17,7 @@ class CartController extends BaseFrontController
     public function actionIndex()
     {
         if(Yii::$app->user->isGuest){
-            $this->redirect("/site/login");
+            $this->redirect(Url::to("site/login"));
         }
         $cart = (new \yii\db\Query())
             ->select(["c.id","c.username", "c.goodsid","c.quantity","g.name","g.price"])
@@ -46,7 +47,7 @@ class CartController extends BaseFrontController
         if($sc){
             $sc->delete();
         }
-        $this->redirect("/cart");
+        $this->redirect(Url::to("@web/cart"));
     }
 
     /**

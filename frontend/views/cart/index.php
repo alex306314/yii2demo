@@ -24,12 +24,12 @@ use yii\helpers\Url;
             <td>￥<?php echo $v['price'] ?></td>
             <td><?php echo $v['quantity'] ?></td>
             <td><a class="btn btn-sm btn-primary btn_cart_remove"
-                   href="/cart/delete?itemid=<?php echo $v['id']; ?>">移除</a></td>
+                   href="<?php echo Url::to("cart/delete"); ?>?itemid=<?php echo $v['id']; ?>">移除</a></td>
         </tr>
         <?php } ?>
     </table>
 </div>
 <div class="row">  总价: <?php echo $total; ?> 元</div>
 <div class="row">
-    <a class="btn btn-warning btn_generate_sheet" href="/order/confirm?ids=<?php echo $ids; ?>">生成订单</a>
+    <a class="btn btn-warning btn_generate_sheet" href="<?php echo Url::to("order/confirm"); ?>?ids=<?php echo $ids; ?>">生成订单</a>
 </div>

@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+use yii\helpers\Url;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -57,10 +58,10 @@ AppAsset::register($this);
                 <div class="col-sm-3 col-md-2 sidebar">
                     <?php foreach(Yii::$app->params['sideNav'] as $k=>$v){ ?>
                     <ul class="nav nav-sidebar">
-                        <li><a href="<?php echo $v['href']; ?>"><?php echo $v['name']; ?></a></li>
+                        <li><a href="<?php echo Url::to("@web".$v['href']); ?>"><?php echo $v['name']; ?></a></li>
                         <?php foreach($v['sub'] as $m=>$n){ ?>
                         <li class="sub">
-                            <a href="<?php echo $n['href']; ?>"><?php echo $n['name']; ?></a>
+                            <a href="<?php echo Url::to("@web".$n['href']); ?>"><?php echo $n['name']; ?></a>
                         </li>
                         <?php } ?>
                     </ul>

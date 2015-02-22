@@ -33,6 +33,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 'goods/<itemid:\d>' => 'goods/index',
+                'add_to_cart' => 'cart/add',
             ],
         ],
     ],
