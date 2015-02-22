@@ -1,0 +1,21 @@
+.goodsul{
+    display: block;
+}
+.goodsul li{
+    display: block;
+    float:left;
+    margin:5px;
+    border:1px solid transparent;
+}
+.goodsul li:hover{
+    border:1px solid #ccc;
+}
+.goodsul li a{
+    display: block;
+}
+.gname{
+
+}
+table.cart{
+
+}
